@@ -10,9 +10,131 @@ body {
   --c-blue: hsl(175, 85%, 33%);
   --c-orange: hsl(22, 59%, 51%);
   --c-main-dark: hsl(0, 0%, 18%);
+  --c-main-darker: hsl(0, 0%, 15%);
+  --c-main-darkest: hsl(0, 0%, 12%);
   --c-main-light: hsl(193, 16%, 83%);
   background-color: var(--c-main-dark);
   color: var(--c-main-light);
   text-align: center;
   font-size: 62.5%;
+}
+
+.cell__button {
+  background-color: var(--c-blue);
+  color: var(--c-main-light);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.cell__data {
+  padding: 5px;
+}
+
+.cell__data--primary {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+.cell__data--secondary {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.cell__header {
+  color: var(--c-blue);
+  font-size: 1.5rem;
+}
+
+.content {
+  margin: auto;
+  max-width: 1200px;
+}
+
+.form__button {
+  background-color: var(--c-main-light);
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  height: 80%;
+}
+
+.form__button:active, .form__button:focus {
+  outline: none;
+}
+
+.form__icon {
+  height: 30px;
+  width: 30px;
+  fill: var(--c-blue);
+}
+
+.form__input {
+  background-color: var(--c-main-light);
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--c-main-dark);
+  font-size: 1.2rem;
+  height: 80%;
+}
+
+.form__input:active, .form__input:focus {
+  outline: none;
+}
+
+.form__row {
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: var(--c-blue);
+  font-size: 6.0rem;
+  font-weight: bold;
+}
+
+.main {
+  background-color: var(--c-main-darker);
+  border-radius: 20px;
+  box-shadow: 10px 10px var(--c-main-darkest);
+  margin: 20px;
+  padding: 10px;
+}
+
+.main__cell {
+  padding: 10px;
+}
+
+.main__row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.main--hidden {
+  display: none;
+}
+
+.message {
+  font-size: 2.5rem;
+}
+
+.message--error {
+  color: red;
+}
+
+.message--hidden {
+  display: none;
 }

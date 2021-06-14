@@ -4,12 +4,15 @@
 
 ## Completed Features
 
-- completed feature
+- display weather data for a city
+- toggle format of data (imperial/metric)
 
 ## Features to Implement
 
-- to do feature
-    - use 4 spaces to nest lists
+- different input methods:
+    - zip code
+    - coordinates
+    - etc
 
 ## Fixes
 

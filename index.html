@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./main.css">
-  <title></title>
-</head>
-<body>
-  <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="content" id="content">
+      <header class="header">
+        <h1 class="header__title">Weather App</h1>
+        <div>
+          <div class="form__row">
+            <button id="search-button" class="form__button" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" id="search-button" class="form__icon" viewBox="0 0 512 512"><title>Search</title><path d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0034.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 00327.3 362.6l94.09 94.09a25 25 0 0035.3-35.3zM97.92 222.72a124.8 124.8 0 11124.8 124.8 124.95 124.95 0 01-124.8-124.8z"/></svg>
+            </button>
+            <input class="form__input" type="text" name="location" id="input-location" required placeholder="Search city">
+          </div>
+        </div>
+      </header>
+      <div id="welcome-message" class="message">Enter your city above to see its current weather</div>
+      <div id="error-message" class="message message--error message--hidden">Your city could not be found!</div>
+      <div id="main" class="main main--hidden">
+        <div class="main__row">
+          <div class="main__cell">
+            <button id="change-mode" class="cell__button">Display in Metric</button>
+          </div>
+        </div>
+        <div class="main__row">
+          <div class="main__cell">
+            <div id="current-temp" class="cell__data cell__data--primary">75.9°F</div>
+            <div id="location" class="cell__data cell__data--secondary">Eau Claire, US</div>
+          </div>
+          <div class="main__cell">
+            <div id="weather-type" class="cell__data cell__data--primary">Clouds</div>
+            <div id="weather-type-detailed" class="cell__data cell__data--secondary">scattered clouds</div>
+          </div>
+        </div>
+        <div class="main__row">
+          <div class="main__cell">
+            <div class="cell__header">Feels Like</div>
+            <div id="feels-like" class="cell__data cell__data--secondary">76.8°F</div>
+          </div>
+          <div class="main__cell">
+            <div class="cell__header">Humidity</div>
+            <div id="humidity" class="cell__data cell__data--secondary">64.1%</div>
+          </div>
+          <div class="main__cell">
+            <div class="cell__header">Wind Speed</div>
+            <div id="wind-speed" class="cell__data cell__data--secondary">5.2 mph</div>
+          </div>
+          <div class="main__cell">
+            <div class="cell__header">Min Temp</div>
+            <div id="min-temp" class="cell__data cell__data--secondary">75.3°F</div>
+          </div>
+          <div class="main__cell">
+            <div class="cell__header">Max Temp</div>
+            <div id="max-temp" class="cell__data cell__data--secondary">77.5°F</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
