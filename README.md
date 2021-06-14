@@ -9,6 +9,7 @@
 
 ## Features to Implement
 
+- loading animation
 - different input methods:
     - zip code
     - coordinates
