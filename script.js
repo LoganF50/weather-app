@@ -98,14 +98,13 @@ const submitHandler = async () => {
   const city = searchInput.value;
   if(city.length !== 0) {
     try {
-      requestedData = await weatherRequest(city).then((data) => {
-        weatherData = convertData(data);
-        fillData(weatherData, isImperialMode);
-        hideWelcomeMessage();
-        hideErrorMessage();
-        resetInput();
-        showWeatherData();
-      });
+      requestedData = await weatherRequest(city);
+      weatherData = convertData(requestedData);
+      fillData(weatherData, isImperialMode);
+      hideWelcomeMessage();
+      hideErrorMessage();
+      resetInput();
+      showWeatherData();
     } catch (error) {
       hideWeatherData();
       hideWelcomeMessage();
